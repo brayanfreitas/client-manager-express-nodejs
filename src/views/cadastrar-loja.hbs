@@ -1,0 +1,91 @@
+<div class="content-wrapper">
+    <section class="content">
+        <form class="needs-validation" id="formLoja">
+            <div class="container-fluid">
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Cadastro de Lojas</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="tipoDoc">De qual empresa a loja pertence:</label>
+                                    {{#select empresa}}
+                                    {{nome_fantasia}}
+                                    {{/select}}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nomeEmpresa">Nome da Loja:</label>
+                                    <input type="text" class="form-control" id="inputNomeEmpresa" name="loja"
+                                        style="max-width: 350px;" placeholder="Entre com o nome da Loja">
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <labelfor="cnpj">CNPJ:</label>
+                                    <input type="text" class="form-control cnpj" id="inputCnpjLoja"
+                                        style="max-width: 50%" placeholder="Entre com o CNPJ">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">CEP:</label>
+                                    <input type="text" class="form-control cep" id="inputCep" style="max-width: 75%">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">Rua:</label>
+                                    <input type="text" class="form-control" id="inputRua" style="max-width: 75%"
+                                        placeholder="Entre com o endereço da loja">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">Bairro:</label>
+                                    <input type="text" class="form-control" id="inputBairro" style="max-width: 75%"
+                                        placeholder="Entre com o endereço da loja">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">Cidade:</label>
+                                    <input type="text" class="form-control" id="inputCidade" style="max-width: 75%"
+                                        placeholder="Entre com o endereço da loja">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">Estado:</label>
+                                    <input type="text" class="form-control" id="inputEstado" style="max-width: 75%"
+                                        placeholder="Entre com o endereço da loja">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="endereco">Complemento:</label>
+                                    <input type="text" class="form-control" id="inputComplemento" style="max-width: 75%"
+                                        placeholder="Entre com o endereço da loja">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+    <!-- /.content -->
+</div>

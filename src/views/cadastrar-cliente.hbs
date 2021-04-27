@@ -1,0 +1,408 @@
+<div class="content-wrapper">
+    <section class="content">
+        <form id="formCliente">
+            <div class="container-fluid">
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Dados da Loja</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="loja">Loja:</label>
+                                    {{#select loja}}
+                                    {{nome_loja}}
+                                    {{/select}}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div clas="form-group">
+                                    <label for="consultor">Consultor:</label>
+                                    <input type="text" class="form-control" id="consultor"
+                                        placeholder="Entre com o seu nome" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Data:</label>
+                                    <div class="input-group date" >
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="text" style="max-width: 40%;" class="form-control data" id="data" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Dados do cliente</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" class="form-control" name="nome" id="nome" style="max-width: 50%;"
+                                        placeholder="Entre com o nome do cliente">
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" class="form-control cpf" id="cpf" name="CPF" style="max-width: 50%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="sexo">Sexo:</label>
+                                    <input type="text" class="form-control" id="sexo" name="sexo" style="max-width: 50%"
+                                        placeholder="Entre com o Sexo">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="estadoCivil">Estado Civil:</label>
+                                    <input type="text" class="form-control" id="estadoCivil" name="estadoCivil" style="max-width: 50%;"
+                                        placeholder="Entre com o Estado Civil">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="naturalidade">Naturalidade:</label>
+                                    <input type="text" class="form-control" id="naturalidade" name="naturalidade" style="max-width: 50%"
+                                        placeholder="Entre com a naturalidade">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="nacionalidade">Nacionalidade:</label>
+                                    <select class="form-control select2bs4" id="nacionalidade" name="nacionalidade" style="width: 50%;">
+                                        <option selected="selected" value="1">Brasileira</option>
+                                        <option value="2">Estrangeira</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="tipoDoc">Tipo Documento:</label>
+                                    <select class="form-control select2bs4" id="tipoDoc" style="width: 50%;">
+                                        <option selected="selected" value="1">IDENTIDADE</option>
+                                        <option value="2">CNH</option>
+                                        <option value="3">CLT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="numeroDoc">Número do documento:</label>
+                                    <input type="text" class="form-control" id="numeroDoc" name="numDoc" style="max-width: 250px;"
+                                        placeholder="Número do Documento">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="orgEmissor">Órgão Emissor</label>orgEmissor
+                                    <input type="text" class="form-control" id="orgEmissor" name="orgEmissor" style="max-width: 250px;"
+                                        placeholder="Orgão Emissor">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="ufOrg">UF do Órgão</label>
+                                    <input type="text" class="form-control" id="ufOrg" name="ufOrg" style="max-width: 250px;"
+                                        placeholder="Entre com o CPF">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="dataEmissao">Data Emissão</label>
+                                    <input type="date" class="form-control" id="dataEmissao" name="dataEmissao" style="max-width: 50%"
+                                        placeholder="Data de emissão">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="nomeMae">Nome da Mãe </label>
+                                    <input type="text" class="form-control" id="nomeMae" name="nomeMae" style="max-width: 75%;"
+                                        placeholder=" Entre com nome da Mãe">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="cep">CEP </label>
+                                    <input type="text" class="form-control cep" id="cep" name="cep" style="max-width: 50%;"
+                                        placeholder=" CEP">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="rua">Rua </label>
+                                    <input type="text" class="form-control" id="rua" name="rua" style="max-width: 75%;"
+                                        placeholder="Nome da Rua">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="numRua">Número </label>
+                                    <input type="text" class="form-control" id="numRua" name="numRua" style="max-width: 30%;"
+                                        placeholder="Número da rua">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="uf">Estado </label>
+                                    <input type="text" class="form-control" id="inputstado" name="estado"  style="max-width: 30%;"
+                                        placeholder="Estado">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="bairro">Bairro </label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro" style="max-width: 60%;"
+                                        placeholder=" Bairro">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="cidade">Cidade </label>
+                                    <input type="text" class="form-control" id="cidade" name="cidade" style="max-width: 75%;"
+                                        placeholder="Cidade">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="complemento">Complemento </label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento" style="max-width: 75%;"
+                                        placeholder="Complemento">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="telFixo">Telefone Fixo </label>
+                                    <input type="text" class="form-control" id="telFixo" name="telFixo" style="max-width: 50%;"
+                                        placeholder="Telefone Fixo">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="celular">Celular </label>
+                                    <input type="text" class="form-control" id="celular" name="celular" style="max-width: 50%;"
+                                        placeholder="Celular">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">Email </label>
+                                    <input type="email" class="form-control" id="email" name="email" style="max-width: 70%;"
+                                        placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="ocupacao">Ocupacao </label>
+                                    <input type="text" class="form-control" id="ocupacao" name="ocupacao" style="max-width: 70%;"
+                                        placeholder="Ocupacao">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="endProfissional">Endereço Profissional </label>
+                                    <input type="text" class="form-control" name="endProfissional" id="endProfissional"
+                                        style="max-width: 100%;" placeholder="Endereço Profissional">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="telProfissional">Telefone Profissional </label>
+                                    <input type="text" class="form-control" id="telProfissional" name="telProfissional" style="max-width: 50%;"
+                                        placeholder="Telefone Profissional">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="salario">Salário </label>
+                                    <input type="text" class="form-control" id="salario" name="salario"  style="max-width: 50%;"
+                                        placeholder="Salário">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="refComercial">Referência Comercial </label>
+                                    <input type="text" class="form-control" id="refComercial" name="refComercial" style="max-width: 75%;"
+                                        placeholder="Referência Comercial">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="contato_comercial">Contato </label>
+                                    <input type="text" class="form-control" id="contato1" name="contato1" style="max-width: 50%;"
+                                        placeholder="Contato">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="refPessoal">Referência Pessoal </label>
+                                    <input type="texte" class="form-control" id="refPessoal" name="refPessoal" style="max-width: 75%;"
+                                        placeholder="Referência Pessoal">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="contato_pessoal">Contato </label>
+                                    <input type="text" class="form-control" id="contato2" name="contato2" style="max-width: 50%;"
+                                        placeholder="Contato">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Dados Comportamentais </h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="freqCompra">Frequência de compra no carnê </label>
+                                    <input type="text" class="form-control" id="freqCompra" style="max-width: 80%;"
+                                        placeholder="Frequência de compra no carnê">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="localCompra">Onde costuma comprar </label>
+                                    <input type="text" class="form-control" id="localCompra" style="max-width: 80%;"
+                                        placeholder="Onde costuma comprar">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Quando foi a última compra:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" id="dataUltimaCompra" style="max-width: 35%" class="form-control"
+                                            data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy"
+                                            data-mask>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--./card Dados do Comportamentais-->
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Renda Familiar</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Selecione a renda familiar total</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option selected="selected">R$0,00 a R$1000</option>
+                                        <option>R$1000 a R$1000,00</option>
+                                        <option>R$1000,00 a R$2000,00</option>
+                                        <option>R$2000,00 a R$3500,00</option>
+                                        <option>R$3500,00 a R$5000,00</option>
+                                        <option>Acima de R$5000,00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--./Renda Familiar-->
+                <div class="card card-default">
+                    <div class="card-header ">
+                        <h3 class="card-title">Dados da Venda</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md46 col-lg-4">
+                                <div class="form-group">
+                                    <label for="freqCompra">Valor Financiado:</label>
+                                    <input type="text" class="form-control" id="freqCompra" style="max-width: 70%;"
+                                        placeholder="Valor Financiado">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label>Quantidade de parcelas:</label>
+                                    <select class="form-control select2" style="width: 40%; text-align: center;">
+                                        <option selected="selected">1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="localCompra">Entrada: </label>
+                                        <input type="text" class="form-control" id="localCompra" style="max-width: 70%;"
+                                            placeholder="Entrada">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label>Score Losango:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+                                        <input type="date" style="max-width: 35%" class="form-control"
+                                            data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy"
+                                            data-mask>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>

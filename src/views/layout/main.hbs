@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{> header}}
+</head>
+
+<body class="{{template}}">
+  <!-- Site wrapper -->
+  {{{ body }}}
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="js/demo.js"></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const firebaseConfig = {
+        apiKey: "AIzaSyB_a3fVIRVlXv3oDPBilmfWrOCOR3gj-QE",
+        authDomain: "wiwaplogin.firebaseapp.com",
+        databaseURL: "https://wiwaplogin-default-rtdb.firebaseio.com",
+        projectId: "wiwaplogin",
+        storageBucket: "wiwaplogin.appspot.com",
+        messagingSenderId: "14559100027",
+        appId: "1:14559100027:web:1438598503c352501ff6de",
+        measurementId: "G-29S3P674H9"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+      document.getElementById("signup").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const login = event.target.login.value;
+        const password = event.target.password.value;
+
+        firebase.auth().signInWithEmailAndPassword(login, password)
+          .then(({ user }) => {
+            return user.getIdToken().then((idToken) => {
+              return fetch("/sessionLogin", {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json",
+                  "CSRF-Token": Cookies.get("XSRF-TOKEN"),
+                },
+                body: JSON.stringify({ idToken }),
+              });
+            });
+          })
+          .then(() => {
+            return firebase.auth().signOut();
+          })
+          .then(() => {
+            window.location.assign("/userPage");
+          }).catch((error)=>{
+            console.log(error);
+            alert("Usuario não existe, tente novamente");
+
+          });
+        return false;
+      });      
+    });
+  </script>
+</body>
+
+</html>

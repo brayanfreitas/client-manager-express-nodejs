@@ -1,0 +1,113 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="../../index3.html" class="brand-link">
+        <img src="/img/logos/logo wiwap2.png" alt="WiwAp Logo" class="brand-image img-circle elevation-3"
+            style="opacity: .8">
+        <span class="brand-text font-weight-light">WiwAp</span>
+    </a>
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src={{userimage}} class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{ username }}</a>
+            </div>
+            <div class="info">
+                <a href="/sessionLogout" class="d-block">Sair</a>
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item has-treeview">
+                    <a href="/userPage" class="nav-link">
+                        <p>
+                            Início
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    {{#if isAdm}}
+                    <a href="/cadastroEmpresa" class="nav-link">
+                        <p>
+                            Cadastrar Empresa
+                        </p>
+                    </a>
+                    {{else}}
+                    <a href="#" class="nav-link">
+                        <p>
+                            Pesquisar CPF
+                        </p>
+                    </a>
+                    {{/if}}
+
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    {{#if isAdm}}
+                    <a href="/cadastroLoja" class="nav-link">
+                        <p>
+                            Cadastrar Loja
+                        </p>
+                    </a>
+                    {{else}}
+                    <a href="" class="nav-link">
+                        <p>
+                            Fazer Simulação
+                        </p>
+                    </a>
+                    {{/if}}
+                </li>
+                <li class="nav-item">
+                    {{#if isAdm}}
+                    <a href="/cadastroLojista" class="nav-link">
+                        <p>
+                            Cadastrar Lojista
+                        </p>
+                    </a>
+                    {{else}}
+                    <a href="/cadastroCliente" class="nav-link">
+                        <p>
+                            Preencher Formulário
+                        </p>
+                    </a>
+                    {{/if}}
+                </li>
+                <li class="nav-item">
+                    {{#if isAdm}}
+                    <a href="/listarFormulario" class="nav-link">
+                        <p>
+                            Listar Formulários
+                        </p>
+                    </a>
+
+                    {{else}}
+                    <a href="#" class="nav-link">
+                        <p>
+                            Imprimir Boleto
+                        </p>
+                    </a>
+                    {{/if}}
+                </li>
+                <li class="nav-item">
+
+                    {{#if isAdm}}
+                    <a href="" class="nav-link">
+                        <p>
+                            Gerar Contrato
+                        </p>
+                    </a>
+
+                    {{else}}
+                    <a href="" class="nav-link">
+                        <p>
+                            Enviar Contrato
+                        </p>
+                    </a>
+                    {{/if}}
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+</aside>

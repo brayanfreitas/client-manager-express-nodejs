@@ -1,0 +1,63 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card card-default">
+                <div class="card-header ">
+                    <h3 class="card-title">Cadastro de Lojistas</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <form id="formLojista">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label for="tipoDoc">De qual loja o lojista pertence:</label>
+                                    {{#select loja}}
+                                    {{nome_loja}}
+                                    {{/select}}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nomeLojista">Nome do Lojista:</label>
+                                    <input type="text" class="form-control req" id="inputNomeLojista"
+                                        style="max-width: 75%;" placeholder="Entre com o nome do Lojista" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cpf">CPF Lojista:</label>
+                                    <input type="text" class="form-control cpf" id="inputCpf" style="max-width: 75%;"
+                                        required>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="usuarioLojista">Usuário que o Lojista irá usar:</label>
+                                    <input type="email" class="form-control" id="inputUsuario" style="max-width: 75%"
+                                        placeholder="Entre com o usuário do Lojista">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="senhaLojista">Senha que o Lojista irá usar:</label>
+                                    <input type="password" class="form-control" id="inputSenha" style="max-width: 75%"
+                                        placeholder="Entre com a senha que o Lojista irá usar" autocomplete="on">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
