@@ -7,8 +7,8 @@ const validaDados = require("./middlewares/validacao-helper");
 require("./database");
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://wiwaplogin-default-rtdb.firebaseio.com",
+  credential: 'credential,
+  databaseURL: "databaseUrlFirebase",
 });
 var db = admin.database();
 
